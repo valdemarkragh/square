@@ -18,7 +18,7 @@ namespace square
                 promptUser();
             } while (error.Length > 0);
 
-            for (int n = 0; n < squareSize; c++)
+            for (int n = 0; n < squareSize; n++)
             {
                 if (n + 1 == squareSize)
                 {
