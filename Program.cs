@@ -1,16 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System;
 
 namespace square
 {
     class Program
     {
         static string error = "";
-        static int rows;
-        static int columns;
+        static int squareSize;
         static void Main(string[] args)
         {
             do
@@ -22,19 +17,19 @@ namespace square
                 promptUser();
             } while (error.Length > 0);
 
-            for (int n = 0; n < rows; c++)
+            for (int n = 0; n < squareSize; c++)
             {
-                if (n + 1 == rows)
+                if (n + 1 == squareSize)
                 {
-                    Console.WriteLine(new string('*', columns));
+                    Console.WriteLine(new string('*', (int)(squareSize * 1.8)));
                 }
                 else if (n > 0)
                 {
-                    Console.WriteLine(new string('*', 1) + new string(' ', columns - 2) + new string('*', 1));
+                    Console.WriteLine(new string('*', 1) + new string(' ', (int)(squareSize * 1.8) - 2) + new string('*', 1));
                 }
                 else
                 {
-                    Console.WriteLine(new string('*', columns));
+                    Console.WriteLine(new string('*', (int)(squareSize * 1.8)));
                 }
             }
         }
@@ -44,11 +39,9 @@ namespace square
             try
             {
                 Console.WriteLine("Enter number of rows: ");
-                rows = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Enter number of columns: ");
-                columns = Convert.ToInt32(Console.ReadLine());
+                squareSize = Convert.ToInt32(Console.ReadLine());
 
-                if (rows > 0 && columns > 0)
+                if (squareSize > 0)
                 {
                     error = "";
                 }
