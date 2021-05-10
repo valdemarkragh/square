@@ -22,13 +22,13 @@ namespace square
                 promptUser();
             } while (error.Length > 0);
 
-            for (int c = 0; c < rows; c++)
+            for (int n = 0; n < rows; c++)
             {
-                if (c + 1 == rows)
+                if (n + 1 == rows)
                 {
                     Console.WriteLine(new string('*', columns));
                 }
-                else if (c > 0)
+                else if (n > 0)
                 {
                     Console.WriteLine(new string('*', 1) + new string(' ', columns - 2) + new string('*', 1));
                 }
