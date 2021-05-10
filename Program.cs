@@ -6,6 +6,7 @@ namespace square
     {
         static string error = "";
         static int squareSize;
+        
         static void Main(string[] args)
         {
             do
